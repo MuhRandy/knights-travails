@@ -15,6 +15,11 @@ module.exports = class Board {
       let node = path.at(-1);
 
       if (node === goal) {
+        console.log(
+          `You made it in ${path.length - 1} moves!  Here's your path: `
+        );
+        path.forEach((p) => console.log(this.#numberToArray(p)));
+
         return this.#numbersToArrays(path);
       }
 
